@@ -51,3 +51,6 @@ Makefile*
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.*
+
+build-*-Release
+build-*-Debug

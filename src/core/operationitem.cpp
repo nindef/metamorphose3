@@ -59,7 +59,7 @@ void OperationItem::preprocess()
 {
     qCDebug(M3CORE) << "pre-process subops in" << textToInsert;
 
-    parsedTextSegments = textToInsert.split(":", QString::SkipEmptyParts);
+    parsedTextSegments = textToInsert.split(":", Qt::SkipEmptyParts);
 
     // TODO:
     // depending on date & time type, pre-calculate

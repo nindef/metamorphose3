@@ -29,12 +29,12 @@ bool OperationModel::isEmpty() const
     return itemsList.isEmpty();
 }
 
-int OperationModel::columnCount(const QModelIndex &parent) const
+int OperationModel::columnCount([[maybe_unused]]const QModelIndex &parent) const
 {
     return 2;
 }
 
-int OperationModel::rowCount(const QModelIndex &parent) const
+int OperationModel::rowCount([[maybe_unused]]const QModelIndex &parent) const
 {
     return itemsList.size();
 }

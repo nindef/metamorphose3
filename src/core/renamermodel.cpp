@@ -171,7 +171,7 @@ bool RenamerModel::addFile(const QFileInfo &fileInfo)
     item->setPath(fileInfo.absolutePath());
     item->setOldName(fileInfo.completeBaseName(), fileInfo.completeSuffix());
     item->setIsDir(fileInfo.isDir());
-    item->setCreated(fileInfo.created());
+    item->setCreated(fileInfo.birthTime());
     item->setLastModified(fileInfo.lastModified());
     itemsList.append(item);
     return true;
@@ -254,7 +254,7 @@ bool itemCompareDesc(RenamerItem *i, RenamerItem *j)
     return RenamerItem::itemCompare(i, j, Qt::DescendingOrder);
 }
 
-void RenamerModel::sort(int column, Qt::SortOrder order)
+void RenamerModel::sort([[maybe_unused]]int column, Qt::SortOrder order)
 {
     int itemCount = rowCount();
     if (itemCount == 0) {

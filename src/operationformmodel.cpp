@@ -86,7 +86,7 @@ QVariant OperationFormModel::data(const QModelIndex &index, int role) const
 }
 
 bool OperationFormModel::removeRows(int row, int count,
-                                    const QModelIndex &parent)
+                                    [[maybe_unused]]const QModelIndex &parent)
 {
     if ((count < 1) || (row < 0) || ((row + count) > rowCount())) {
         return false;

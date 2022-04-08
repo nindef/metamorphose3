@@ -21,7 +21,7 @@ OperationsForm::~OperationsForm()
 
 void OperationsForm::on_addOperation_activated(int index)
 {
-    OperationFormItem *opForm;
+    OperationFormItem *opForm = nullptr;
     switch (index) {
     case 1: {
         opForm = new InsertForm(this);
